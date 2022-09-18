@@ -13,13 +13,13 @@
         <h3 class="text-white">Introdueix el teu nom i data de naixement per calcular el teu <h2 class="text-white">Biorritme</h2></h3>
     </div>
     <form name="form" method="POST" action="biorritme.php">
-        <div class="form-row text-center center-block">
-            <input type="text" name="nom" class="form-control w-50 mt-5 mb-3" placeholder="Nom">
+        <div class="form-row text-center justify-content-center">
+            <input type="text" name="nom" class="form-control w-50 mt-5 mb-3 bg-gray" placeholder="Nom">
         </div>
         <div class="form-row text-center justify-content-center">
             <input type="date" name="data" class="form-control w-50 mb-3">
         </div>
-        <div class="form-group text-center">
+        <div class="form-group text-center justify-content-center">
             <input type="submit" class="btn btn-primary" value="Enviar" class="form-control">
         </div>    
     </form>    

@@ -28,25 +28,6 @@ class Biorritme {
     return round(sin(2 * pi() * ($this->diferencia / $cicle)), 2) * 100 . $this->porcentaje;
   }
 
-  // Methods
-  /*function calcularBio() {
- 
-    $fisic = 23;
-    $emocional = 28;
-    $intellectual = 33;
-
-    $fisic = $this->formula($fisic);
-    $emocional = $this->formula($emocional);
-    $intellectual = $this->formula($intellectual);
-
-    echo "Hola " . $this->nom . " els teus biorritmes són: <br>";
-    echo "Físic: " . $fisic . "<br>";
-    echo "Emocional: " . $emocional . "<br>";
-    echo "Intellectual: " . $intellectual . "<br>";
-
-
-  }*/
-
   function calcularFisic() {
     $fisic = 23;
     $fisic = $this->formula($fisic);
@@ -70,9 +51,8 @@ class Biorritme {
     return $this->nom;
   }
 
-  public function mostrarDatos(){
-    echo "Nom: ".$this->nom;
-    echo "<br>Diferencia: ".$this->diferencia. "<br>";
+  public function mostrarDif(){
+    echo $this->diferencia;
   }
 }
 
@@ -80,8 +60,7 @@ class Biorritme {
 
 $biorritme = new Biorritme($data, $nom);
 
-$biorritme->mostrarDatos();
-//$biorritme->calcularBio();
+$biorritme->mostrarDif();
 $biorritme->calcularFisic();
 $biorritme->calcularEmocional();
 $biorritme->calcularIntellectual();
@@ -97,18 +76,41 @@ $biorritme->calcularIntellectual();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Document</title>
+  <title>Biorritme</title>
 </head>
 <body style="background-color: #000E24">
-//center progress bar 
-<div class="mt-5 d-flex justify-content-center">
-  <div class="progress mb-3 w-50">
+
+<table class="table table-bordered w-50 mx-auto">
+  <tr>
+    <th class="text-white">Nom</th>
+    <th class="text-info text-center"><?php echo $nom ?></th>
+  </tr>
+    <tr>
+      <th class="text-white">Diferencia de dies</th>
+    <th class="text-info text-center"><?php echo $biorritme->mostrarDif() ?></th>
+  </tr>
+  <tr>
+    <td class="text-danger">Fisic</td>
+    <td class="text-white text-center"><?php $biorritme->calcularFisic(); ?></td>
+  </tr>
+  <tr>
+    <td class="text-warning">Emocional</td>
+    <td class="text-white text-center"><?php $biorritme->calcularEmocional(); ?></td>
+  </tr>
+  <tr>
+    <td class="text-primary">Intelectual</td>
+    <td class="text-white text-center"><?php $biorritme->calcularIntellectual(); ?></td>
+  </tr>
+</table>
+
+<div class="mt-5">
+  <div class="progress mb-3 w-50 mx-auto">
       <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php $biorritme->calcularFisic(); ?>" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularFisic(); ?></div>
     </div>
-    <div class="progress mb-3 w-50">
+    <div class="progress mb-3 w-50 mx-auto">
       <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php $biorritme->calcularEmocional(); ?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularEmocional(); ?></div>
     </div>
-    <div class="progress mb-3 w-50">
+    <div class="progress mb-3 w-50 mx-auto">
       <div class="progress-bar progress-bar-striped bg-succes" role="progressbar" style="width: <?php $biorritme->calcularIntellectual(); ?>"aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularIntellectual(); ?></div>
   </div>
 </div>
