@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Biorritmes</title>
 </head>
-<body>
+<body style="background-color: #000E24">
     <div class="text-center mt-5">
-        <h3>Introdueix el teu nom i data de naixement per calcular el teu <h2>Biorritme</h2></h3>
+        <h3 class="text-white">Introdueix el teu nom i data de naixement per calcular el teu <h2 class="text-white">Biorritme</h2></h3>
     </div>
     <form name="form" method="POST" action="biorritme.php">
-        <div class="form-row text-center justify-content-center">
-            <input type="text" name="nom" class="form-control w-50 mt-5" placeholder="Nom">
+        <div class="form-row text-center center-block">
+            <input type="text" name="nom" class="form-control w-50 mt-5 mb-3" placeholder="Nom">
         </div>
         <div class="form-row text-center justify-content-center">
             <input type="date" name="data" class="form-control w-50 mb-3">
