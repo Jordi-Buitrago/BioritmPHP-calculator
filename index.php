@@ -14,10 +14,10 @@
     </div>
     <form name="form" method="POST" action="biorritme.php">
         <div class="form-row text-center justify-content-center">
-            <input type="text" name="nom" class="form-control w-50 mt-5 mb-3 bg-gray" placeholder="Nom">
+            <input type="text" name="nom" class="form-control w-50 mt-5 mb-3 bg-gray" placeholder="Nom" required>
         </div>
         <div class="form-row text-center justify-content-center">
-            <input type="date" name="data" class="form-control w-50 mb-3">
+            <input type="date" name="data" class="form-control w-50 mb-3" required>
         </div>
         <div class="form-group text-center justify-content-center">
             <input type="submit" class="btn btn-primary" value="Enviar" class="form-control">

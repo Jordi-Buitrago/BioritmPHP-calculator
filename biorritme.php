@@ -79,39 +79,38 @@ $biorritme->calcularIntellectual();
   <title>Biorritme</title>
 </head>
 <body style="background-color: #000E24">
-
 <table class="table table-bordered w-50 mx-auto">
   <tr>
     <th class="text-white">Nom</th>
-    <th class="text-info text-center"><?php echo $nom ?></th>
+    <th class="text-info text-center"><?php echo $nom?></th>
   </tr>
     <tr>
       <th class="text-white">Diferencia de dies</th>
-    <th class="text-info text-center"><?php echo $biorritme->mostrarDif() ?></th>
+    <th class="text-info text-center"><?php echo $biorritme->mostrarDif()?></th>
   </tr>
   <tr>
     <td class="text-danger">Fisic</td>
-    <td class="text-white text-center"><?php $biorritme->calcularFisic(); ?></td>
+    <td class="text-white text-center"><?php $biorritme->calcularFisic();?></td>
   </tr>
   <tr>
     <td class="text-warning">Emocional</td>
-    <td class="text-white text-center"><?php $biorritme->calcularEmocional(); ?></td>
+    <td class="text-white text-center"><?php $biorritme->calcularEmocional();?></td>
   </tr>
   <tr>
     <td class="text-primary">Intelectual</td>
-    <td class="text-white text-center"><?php $biorritme->calcularIntellectual(); ?></td>
+    <td class="text-white text-center"><?php $biorritme->calcularIntellectual();?></td>
   </tr>
 </table>
 
 <div class="mt-5">
   <div class="progress mb-3 w-50 mx-auto">
-      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php $biorritme->calcularFisic(); ?>" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularFisic(); ?></div>
+      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <?php $biorritme->calcularFisic();?>" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularFisic();?></div>
     </div>
     <div class="progress mb-3 w-50 mx-auto">
-      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php $biorritme->calcularEmocional(); ?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularEmocional(); ?></div>
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <?php $biorritme->calcularEmocional();?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularEmocional(); ?></div>
     </div>
     <div class="progress mb-3 w-50 mx-auto">
-      <div class="progress-bar progress-bar-striped bg-succes" role="progressbar" style="width: <?php $biorritme->calcularIntellectual(); ?>"aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularIntellectual(); ?></div>
+      <div class="progress-bar progress-bar-striped bg-succes" role="progressbar" style="width: <?php $biorritme->calcularIntellectual();?>"aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><?php $biorritme->calcularIntellectual();?></div>
   </div>
 </div>
 </body>
